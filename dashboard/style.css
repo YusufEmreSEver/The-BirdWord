@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff7f0;
+  color: #333;
+}
+
+header {
+  background-color: #ff7300;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #ffa94d;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.post .meta {
+  font-size: 0.9em;
+  color: #999;
+}
+
+button, input[type="submit"] {
+  background-color: #ff7300;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #e65c00;
+}
+
+input[type="text"], input[type="password"], textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+a.logout {
+  color: white;
+  background-color: #d63031;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}

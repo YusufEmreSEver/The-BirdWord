@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Birdword - Kayıt ve Giriş</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #fff3e0; }
+        .container { max-width: 400px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ffa726; }
+        h2 { text-align: center; color: #fb8c00; }
+        input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ffa726; border-radius: 4px; }
+        button { width: 100%; padding: 10px; background: #fb8c00; border: none; color: white; font-weight: bold; cursor: pointer; border-radius: 4px; }
+        button:hover { background: #ef6c00; }
+        .switch { text-align: center; margin-top: 10px; }
+        .switch a { color: #fb8c00; cursor: pointer; text-decoration: none; }
+        .error { color: red; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Kayıt Ol</h2>
+    <form action="register.php" method="post" id="registerForm">
+        <input type="text" name="username" placeholder="Kullanıcı Adı" required />
+        <input type="email" name="email" placeholder="E-posta" required />
+        <input type="password" name="password" placeholder="Şifre" required />
+        <button type="submit">Kayıt Ol</button>
+    </form>
+
+    <div class="switch">
+        Zaten hesabın var mı? <a href="#" onclick="showLogin()">Giriş Yap</a>
+    </div>
+</div>
+
+<div class="container" style="display:none;" id="loginContainer">
+    <h2>Giriş Yap</h2>
+    <form action="login.php" method="post" id="loginForm">
+        <input type="text" name="username" placeholder="Kullanıcı Adı" required />
+        <input type="password" name="password" placeholder="Şifre" required />
+        <button type="submit">Giriş Yap</button>
+    </form>
+
+    <div class="switch">
+        Hesabın yok mu? <a href="#" onclick="showRegister()">Kayıt Ol</a>
+    </div>
+</div>
+
+<script>
+    function showLogin() {
+        document.getElementById('registerForm').parentElement.style.display = 'none';
+        document.getElementById('loginContainer').style.display = 'block';
+    }
+    function showRegister() {
+        document.getElementById('loginContainer').style.display = 'none';
+        document.getElementById('registerForm').parentElement.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
